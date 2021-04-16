@@ -4,14 +4,14 @@ import ScoreBoard from './Scoreboard.js';
 import MessageBoard from './MessageBoard.js';
 
 // imgs
-import boot from '../img/boot.png'; import butterfly from '../img/butterfly.png';
-import chick from '../img/chick.png'; import clover from '../img/clover.png';
-import dragonfly from '../img/dragonfly.png'; import fan from '../img/fan.png';
-import ladybird from '../img/ladybird.png'; import leaf from '../img/leaf.png';
-import moth from '../img/moth.png'; import rainbow from '../img/rainbow.png';
-import rose from '../img/rose.png'; import sprout from '../img/sprout.png';
-import strawberry from '../img/strawberry.png'; import sun from '../img/sun.png';
-import sunflower from '../img/sunflower.png'; import worm from '../img/worm.png';
+import boot from '../imgs/boot.png'; import butterfly from '../imgs/butterfly.png';
+import chick from '../imgs/chick.png'; import clover from '../imgs/clover.png';
+import dragonfly from '../imgs/dragonfly.png'; import fan from '../imgs/fan.png';
+import ladybird from '../imgs/ladybird.png'; import leaf from '../imgs/leaf.png';
+import moth from '../imgs/moth.png'; import rainbow from '../imgs/rainbow.png';
+import rose from '../imgs/rose.png'; import sprout from '../imgs/sprout.png';
+import strawberry from '../imgs/strawberry.png'; import sun from '../imgs/sun.png';
+import sunflower from '../imgs/sunflower.png'; import worm from '../imgs/worm.png';
 
 export default function CardContainer() {
     const [cards, setCards] = useState({
@@ -42,16 +42,14 @@ export default function CardContainer() {
         win: false
     })
 
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState('Click a card to start!')
 
     function addScore(){
         setScores({...scores, currentScore: scores.currentScore + 1});
-
     }
 
     function resetScore(){
         setScores({...scores, currentScore: 0});
-
     }
 
     function resetCards(){
@@ -64,7 +62,7 @@ export default function CardContainer() {
 
     function updateMessage(result){
         if(result === 'win'){
-        setMessage('Wowza! You win. Play again? Just click another card.')
+        setMessage('You win!! Play again? Just click another card.')
     } else {
         setMessage('Oh no! You lose. Play again? Just click another card.')
     }
@@ -92,7 +90,6 @@ export default function CardContainer() {
                 setScores({...scores, bestScore: scores.currentScore}); 
             }
             setOutcome({...outcome, lose: true})
-            //make alert/more interactive UI
         } else if (result === 'win') {
             updateMessage('win');
             if (scores.currentScore > scores.bestScore){
@@ -100,7 +97,6 @@ export default function CardContainer() {
             }
             setOutcome({...outcome, win: true})
         }
-        //resetGame();
     }
     
     function checkWin() {
@@ -118,12 +114,10 @@ export default function CardContainer() {
         } else {
            gameOver('lose');
         }
-
     }
 
    useEffect(() => {
         updateArray(cardArray.sort(() => Math.random() - 0.5));
-        //update in useState
         if (outcome.lose === true || outcome.win === true){
         resetGame();
         }
@@ -132,6 +126,7 @@ export default function CardContainer() {
 
     return(
         <div className="container">
+                <MessageBoard message={message} />
             <div className="cardContainer">
                 {cardArray.map((card, index) =>
                     <div key={index} className="card" onClick={(event) => {handleClick(card)}}>
@@ -143,9 +138,6 @@ export default function CardContainer() {
             </div>
             <div className="scoreBoard">
                 <ScoreBoard currentScore={scores.currentScore} bestScore={scores.bestScore} />
-                <br />
-                <MessageBoard message={message} />
-                <br />
                 <button className="reset" onClick={resetAll}>
                     Reset All Scores
                 </button>
