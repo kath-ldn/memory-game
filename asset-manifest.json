@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory-game-ReactJS/static/css/main.7fd60e82.chunk.css",
+    "main.css": "/memory-game-ReactJS/static/css/main.880384fd.chunk.css",
     "main.js": "/memory-game-ReactJS/static/js/main.2032b972.chunk.js",
     "main.js.map": "/memory-game-ReactJS/static/js/main.2032b972.chunk.js.map",
     "runtime-main.js": "/memory-game-ReactJS/static/js/runtime-main.059bab2a.js",
@@ -8,7 +8,7 @@
     "static/js/2.143e0305.chunk.js": "/memory-game-ReactJS/static/js/2.143e0305.chunk.js",
     "static/js/2.143e0305.chunk.js.map": "/memory-game-ReactJS/static/js/2.143e0305.chunk.js.map",
     "index.html": "/memory-game-ReactJS/index.html",
-    "static/css/main.7fd60e82.chunk.css.map": "/memory-game-ReactJS/static/css/main.7fd60e82.chunk.css.map",
+    "static/css/main.880384fd.chunk.css.map": "/memory-game-ReactJS/static/css/main.880384fd.chunk.css.map",
     "static/js/2.143e0305.chunk.js.LICENSE.txt": "/memory-game-ReactJS/static/js/2.143e0305.chunk.js.LICENSE.txt",
     "static/media/boot.c2834d92.png": "/memory-game-ReactJS/static/media/boot.c2834d92.png",
     "static/media/butterfly.ebc06b55.png": "/memory-game-ReactJS/static/media/butterfly.ebc06b55.png",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.059bab2a.js",
     "static/js/2.143e0305.chunk.js",
-    "static/css/main.7fd60e82.chunk.css",
+    "static/css/main.880384fd.chunk.css",
     "static/js/main.2032b972.chunk.js"
   ]
 }
