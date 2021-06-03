@@ -6,7 +6,7 @@ This is a memory game that I developed for [The Odin Project: Javascript module,
 
 ### Live Demo
 
-[GitHub Pages](https://kath-ldn.github.io/memory-game/)
+[GitHub Pages](https://kath-ldn.github.io/memory-game-ReactJS/)
 
 ### Built with
 
