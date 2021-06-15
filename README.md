@@ -32,6 +32,9 @@ Copyright (c) 2021 Kath Turner
 
 * To check mobile responsiveness
 * CSS requires lots of 'importants' - to check why
+* 'Random' shuffle not optimal - to amend
+*   https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+*   https://javascript.info/array-methods#shuffle-an-array
 
 ## Acknowledgements
 
